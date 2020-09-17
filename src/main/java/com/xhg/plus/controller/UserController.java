@@ -48,7 +48,7 @@ public class UserController {
 		user.setUserAge(age);
 		user.setUserEmail(email);
 		
-		boolean save = userService.save(user);	
+		boolean save = userService.save(user);
 		return "success";
 	}
 }
