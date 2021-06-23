@@ -4,10 +4,9 @@
  */
 package com.xhg.plus.mapper;
 
-import java.util.HashMap;
-
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.xhg.plus.pojo.User;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  *
@@ -15,6 +14,7 @@ import com.xhg.plus.pojo.User;
  * @author Administrator
  * @Description:TODO(描述这个类的作用)
  */
+@Mapper
 public interface UserMapper extends BaseMapper<User>{
 	
 }

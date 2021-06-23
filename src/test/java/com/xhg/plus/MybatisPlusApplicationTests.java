@@ -1,15 +1,13 @@
 package com.xhg.plus;
 
-import static org.assertj.core.api.Assertions.entry;
+import com.xhg.plus.util.RedisUtil;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class MybatisPlusApplicationTests {
@@ -53,6 +51,16 @@ class MybatisPlusApplicationTests {
 			return a * demo(a - 1);
 		}
 		
+	}
+
+	@Autowired
+	private RedisUtil redisUtil;
+
+	@Test
+	public void testdemo2(){
+
+		System.out.println(redisUtil.get("number"));
+
 	}
 
 }
